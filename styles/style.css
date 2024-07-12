@@ -155,7 +155,6 @@ nav {
     padding: 40px;
     position: relative;
     background: linear-gradient(90deg, #1D1D1D 31.59%, #1D1D1D 90.35%, #1D1D1D 90.35%);
-    overflow: hidden;
 }
 .about::before {
     content: "";
@@ -195,7 +194,22 @@ nav {
     font-size: 15px;
     font-weight: 600;
 }
-
+/* Small Pc Design */
+@media only screen  and (max-width: 1100px) {
+    .navContent {
+        background-color: #1d1d1d;
+        padding: 20px 30px 10px 60px;
+    }
+    .bannerContent {
+        padding-left: 60px;
+    }
+    .bannerText h3 {
+        margin-bottom: 15px;
+    }
+    .bannerText h1 {
+        font-size: 36px;
+    }
+}
 
 /* Tablet Design */
 @media only screen  and (max-width: 768px) {
@@ -203,7 +217,7 @@ nav {
         display: none;
     }
     .navContent {
-        padding: 20px 40px; 
+        padding: 10px 40px; 
     }
     .hamburger {
         display: block;
@@ -213,12 +227,70 @@ nav {
     .hamburger:hover .mobileNav {
         display: block !important;
     }
-    .bannerContent {
-        width: 40%;
-        padding-left: 50px;
+    .banner {
+        flex-direction: column-reverse;
+        max-width: 100%;
+        height: 540px;
+        position: relative;
+        background-color: transparent;
     }
     .bannerImage {
-        width: 60%;
+        width: 100%;
+        z-index: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .bannerContent {
+        display: flex;
+        gap: 25px 10px;
+        justify-content: space-between;
+        align-items: end;
+        width: 100%;
+        height: 200px;
+        padding-left: 0;
+        padding: 20px 40px;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.56);
+        clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);
+
+    }
+    .bannerText h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+    .bannerText h1 {
+        font-size: 28px;
+        font-weight: 800;
+        color: #fff;
+    }
+    .bannerText p {
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+    .iconBox {
+        display: flex;
+        flex-direction: column;
+    }
+    .iconBox> i {
+        width: 10px;
+        height: 10px;
+        font-size: 26px;
+        color: #fff;
+        padding: 5px;
+        margin-bottom: 35px;
+        margin-right: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .bannerImage img {
+        margin-top: 70px;
+        padding-top: 0;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
     }
     .about {
         text-align: center;
@@ -238,72 +310,14 @@ nav {
 /* Mobile Design */
 @media only screen  and (max-width: 430px) {
     .navContent {
-        padding: 10px 20px; 
-    }
-    .banner {
-        flex-direction: column-reverse;
-        max-width: 100%;
-        height: 420px;
-        position: relative;
-        background-color: transparent;
-    }
-    .bannerImage {
-        width: 100%;
-        z-index: 0;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        padding: 5px 20px; 
     }
     .bannerContent {
-        display: flex;
-        gap: 20px;
-        justify-content: space-evenly;
-        align-items: end;
-        width: 100%;
         height: 180px;
-        padding-left: 0;
-        padding: 20px;
-        position: absolute;
-        bottom: 0;
-        z-index: 1;
-        background-color: rgba(0, 0, 0, 0.56);
-        clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);
-
-    }
-    .bannerText h3 {
-        font-size: 16px;
-        margin-bottom: 5px;
-        color: #fff;
-    }
-    .bannerText h1 {
-        font-size: 24px;
-        font-weight: 800;
-        color: #fff;
-    }
-    .bannerText p {
-        font-size: 12px;
-        color: #fff;
-        margin-bottom: 5px;
-    }
-    .iconBox {
-        display: flex;
-        flex-direction: column;
-    }
-    .iconBox> i {
-        width: 10px;
-        height: 10px;
-        font-size: 16px;
-        color: #fff;
-        padding: 5px;
-        margin-bottom: 30px;
-        margin-right: 0;
-        background-color: transparent;
-        box-shadow: none;
-    }
+        padding: 20px 30px;
+    } 
     .bannerImage img {
-        margin-top: 0;
-        padding-top: 0;
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
+        margin-top: 40px;
     }
     .about {
         padding: 40px 20px;
@@ -317,5 +331,25 @@ nav {
     }
     .about > p{
         text-align: justify;
+    }
+}
+
+/* Small Mobile Design */
+@media only screen  and (max-width: 321px) {
+    .banner {
+        height: 400px;
+    }
+    .bannerText h3 {
+        font-size: 17px;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+    .bannerText h1 {
+        font-size: 20px;
+	margin-bottom: 5px;
+    }
+    .bannerText p {
+        font-size: 12px;
+        margin-bottom: 0;
     }
 }
