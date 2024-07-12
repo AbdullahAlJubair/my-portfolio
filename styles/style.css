@@ -1,0 +1,321 @@
+/* Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+}
+/* Body design */
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #D7D7D7;
+}
+/* Navigation section design */
+nav {
+    position: relative;
+}
+.navContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 0 120px;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.logo>img {
+    width: 50px;
+    height: 50px;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+}
+.menu>li>a{
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.navBtn {
+    color: #000;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 20px;
+    border: 0;
+}
+.hamburger {
+    display: none;
+}
+/* Mobile Navigation */
+.mobileNav {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.836);
+    text-align: center;
+}
+.mobileNav li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+}
+.mobileNav li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+.mobileNav>.navBtn {
+    font-size: 12px;
+    padding: 10px 20px;
+    margin:5px 0 ;
+}
+/* Banner section design */
+.banner {
+    height: 520px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D7D7D7;
+}
+.bannerContent {
+    width: 50%;
+    padding-left: 120px;
+}
+.bannerText {
+    color: #000;
+
+}
+.bannerText h3 {
+    color: #000;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.bannerText h1 {
+    color: #000;
+    font-size: 50px;
+    font-weight: 900;
+}
+.bannerText p {
+    color: #909090;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.iconBox> i {
+    width: 60px;
+    height: 55px;
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+    margin-right: 20px;
+    cursor: pointer;
+    background: #C4C4C4;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.bannerImage {
+    text-align: center;
+    background-color: #000;
+    width: 50%;
+    height: 100%;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+
+}
+.bannerImage img {
+    margin-top: 30px;
+    padding-top: 50px;
+    background-color: #000;
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+/* About Section Layout */
+/* .about {
+    color: #fff;
+    padding: 40px;
+    background-image: url('../images/Aj.svg');
+    background: linear-gradient(90deg, #1D1D1D 31.59%, #1D1D1D 90.35%, #1D1D1D 90.35%);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 50%;
+    transform: rotate(30deg);
+} */
+.about {
+    text-align: justify;
+    color: #fff;
+    padding: 40px;
+    position: relative;
+    background: linear-gradient(90deg, #1D1D1D 31.59%, #1D1D1D 90.35%, #1D1D1D 90.35%);
+    overflow: hidden;
+}
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 2%;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 15%;
+    opacity: .4;
+}
+.about h2 {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.about p {
+    width: 80%;
+    margin-bottom: 40px;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 138.682%;
+}
+.aboutBtn {
+    background-color: transparent;
+    padding: 10px 20px;
+    border: none;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* Tablet Design */
+@media only screen  and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .navContent {
+        padding: 20px 40px; 
+    }
+    .hamburger {
+        display: block;
+        font-size: 20px;
+        color: #fff;
+    }
+    .hamburger:hover .mobileNav {
+        display: block !important;
+    }
+    .bannerContent {
+        width: 40%;
+        padding-left: 50px;
+    }
+    .bannerImage {
+        width: 60%;
+    }
+    .about {
+        text-align: center;
+    }
+    .about > p{
+        width: 100%;
+    }
+    .about::before {
+        background-image: url(../images/logo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30%;
+        opacity: .2;
+    }
+}
+
+/* Mobile Design */
+@media only screen  and (max-width: 430px) {
+    .navContent {
+        padding: 10px 20px; 
+    }
+    .banner {
+        flex-direction: column-reverse;
+        max-width: 100%;
+        height: 420px;
+        position: relative;
+        background-color: transparent;
+    }
+    .bannerImage {
+        width: 100%;
+        z-index: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .bannerContent {
+        display: flex;
+        gap: 20px;
+        justify-content: space-evenly;
+        align-items: end;
+        width: 100%;
+        height: 180px;
+        padding-left: 0;
+        padding: 20px;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.56);
+        clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);
+
+    }
+    .bannerText h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+    .bannerText h1 {
+        font-size: 24px;
+        font-weight: 800;
+        color: #fff;
+    }
+    .bannerText p {
+        font-size: 12px;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+    .iconBox {
+        display: flex;
+        flex-direction: column;
+    }
+    .iconBox> i {
+        width: 10px;
+        height: 10px;
+        font-size: 16px;
+        color: #fff;
+        padding: 5px;
+        margin-bottom: 30px;
+        margin-right: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .bannerImage img {
+        margin-top: 0;
+        padding-top: 0;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .about {
+        padding: 40px 20px;
+    }
+    .about::before {
+        background-size: 80%;
+        opacity: .1;
+    }
+    .about h2 {
+        font-size: 24px;
+    }
+    .about > p{
+        text-align: justify;
+    }
+}
