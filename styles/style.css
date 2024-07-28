@@ -439,6 +439,7 @@ nav {
     }
     .toolBox {
         margin-left: 10px;
+        justify-content: center;
         column-gap: 10px;
     }
     .toolBox>.skillsIcon {
