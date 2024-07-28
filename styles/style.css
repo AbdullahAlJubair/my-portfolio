@@ -436,6 +436,7 @@ nav {
     .skillsHeading {
         font-size: 15px;
         margin-left: 10px;
+        text-align: center;
     }
     .toolBox {
         margin-left: 10px;
