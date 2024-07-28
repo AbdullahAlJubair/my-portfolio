@@ -376,6 +376,9 @@ nav {
     .skillTitle {
         font-size: 14px;
     }
+    .toolBox {
+        column-gap: 20px;
+    }
 }
 
 /* Mobile Design */
