@@ -158,7 +158,6 @@ nav {
     width: 400px;
     height: auto;
     object-fit: cover;
-    filter: grayscale(50%) brightness(1);
 }
 
 /* About Section Layout */
