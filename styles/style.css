@@ -409,6 +409,7 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 60px;
+    margin-bottom: 50px;
 }
 
 .eCard {
@@ -437,7 +438,7 @@ nav {
 
 .eCard>.eCardHead img {
     position: absolute;
-    top: -6px;
+    top: -10px;
     left: -40px;
 }
 
