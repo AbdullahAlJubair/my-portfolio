@@ -663,8 +663,69 @@ nav {
 .eduTag, .eduTitle, .eduDetails {
     margin-bottom: 15px;
 }
-
-
+/* Resume section layout style */
+.resumeBox {
+    margin-top: 150px;
+}
+.resumeBox h3 {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--secondaryColor);
+    text-align: center;
+    margin-bottom: 50px;
+    text-shadow: 7px 5px 0px rgb(81 60 0 / 45%);
+    font-family: 'Montserrat';
+}
+.resumeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #181818;
+    padding: 50px 10px;
+    border-radius: 15px;
+}
+.resumeContainer img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid var(--secondaryColor);
+}
+.resumeTitle {
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Montserrat';
+    color: var(--secondaryColor);
+    font-weight: 700;
+}
+.resumeText {
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--grayWhite);
+}
+#resumeBtn1 {
+    background-color: #ac94511f;
+    color: var(--secondaryColor);
+    margin-right: 10px;
+}
+#resumeBtn2 {
+    background-color: #ac9451;
+    color: #000;
+    margin-left: 10px;
+}
+.resumeBtn {
+    border: 1px solid var(--secondaryColor);
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    cursor: pointer;
+    
+}
 
 
 
@@ -1078,6 +1139,23 @@ nav {
     }
     .eduDetails {
         font-size: 12px;
+    }
+    .resumeBox {
+        margin-top: 100px;
+    }
+    .resumeBox h3 {
+        font-size: 28px;
+    }
+    .resumeTitle {
+        font-size: 26px;
+    }
+    #resumeBtn1 {
+        margin-right: 0;
+    }
+    
+    
+    .resumeBtn {
+        padding: 10px 15px;
     }
 }
 
