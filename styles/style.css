@@ -458,12 +458,14 @@ nav {
     padding: 50px;
 }
 
-.experienceBox>.exploreHead {
+.experienceBox>.exploreHead,
+ .educationBox>.exploreHead {
     color: var(--secondaryColor);
     margin: 0 0 100px;
 }
 
-.experienceBox>.exploreHead::after {
+.experienceBox>.exploreHead::after,
+ .educationBox>.exploreHead::after {
     filter: invert();
 }
 
@@ -586,7 +588,81 @@ nav {
     width: 20px;
     text-align: center;
 }
-
+/* Education Section Layout */
+.educationBox {
+    margin-top: 150px;
+}
+.educationContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+.eduCard {
+    flex: 1;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.eduContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.eduDate {
+    padding: 5px 15px;
+    border-radius: 15px;
+    background-color: #000;
+}
+.eduDate p {
+    color: var(--secondaryColor);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+.eduGrad {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 5px 15px 5px 10px;
+    background-color: #fcefcc;
+    border-radius: 15px;
+}
+.eduGrad img {
+    width: 20px;
+}
+.eduGrad p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+}
+.eduTag {
+    font-size: 15px;
+    font-weight: 700;
+    background-color: var(--grayWhite);
+    width: max-content;
+    padding: 5px 15px;
+    border-radius: 15px 15px 15px 0;
+}
+.eduTitle {
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+}
+.eduDetails {
+    font-size: 15px;
+    font-weight: 600;
+}
+.eduDetails>i {
+    background-color: var(--grayWhite);
+    padding: 7px;
+    border-radius: 15px;
+    font-size: 10px;
+    color: var(--secondaryColor);
+}
+.eduTag, .eduTitle, .eduDetails {
+    margin-bottom: 15px;
+}
 
 
 
@@ -811,6 +887,12 @@ nav {
     .experienceBox {
         padding: 50px 10px;
     }
+    .educationContent {
+        flex-wrap: wrap;
+    }
+    .eduCard {
+        flex: unset;
+    }
 
 }
 
@@ -975,6 +1057,30 @@ nav {
         padding-left: 20px;
         font-size: 10px;
         margin-bottom: 3px;
+    }
+    .educationBox {
+        margin-top: 80px;
+    }
+    .eduCard {
+        padding: 20px 10px;
+    }
+    .eduDate {
+        font-size: 10px;
+    }
+    .eduGrad img {
+        width: 15px;
+    }
+    .eduGrad p {
+        font-size: 10px;
+    }
+    .eduTag {
+        font-size: 10px;
+    }
+    .eduTitle {
+        font-size: 17px;
+    }
+    .eduDetails {
+        font-size: 12px;
     }
 }
 
