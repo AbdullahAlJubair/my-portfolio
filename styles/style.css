@@ -386,8 +386,8 @@ nav {
 }
 
 .projectBox>.headingBox h2 {
-    font-weight: 500;
-    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
 }
 
 .projectBox>.headingBox p {
@@ -559,7 +559,10 @@ nav {
     border-radius: 10px;
     padding: 20px;
 }
-
+.xpJobTitle {
+    font-size: 20px;
+    font-weight: 700;
+}
 .xpCardJobDetails {
     display: flex;
     justify-content: space-between;
@@ -1232,7 +1235,9 @@ footer>h3 {
     .toolBox>.skillsIcon>img {
         width: 40%;
     }
-
+    .projectBox>.headingBox {
+        padding: 30px 10px;
+    }
     .projectCard {
         grid-template-columns: repeat(1, 1fr);
         margin-top: 0;
@@ -1272,7 +1277,7 @@ footer>h3 {
     }
 
     .xpCard {
-        padding: 10px;
+        padding: 10px 5px 30px;
     }
 
     .xpCardCompany {
@@ -1305,7 +1310,7 @@ footer>h3 {
     }
     .xpJobDescription>ul>li {
         padding-left: 20px;
-        font-size: 10px;
+        font-size: 11px;
         margin-bottom: 3px;
     }
     .educationBox {
