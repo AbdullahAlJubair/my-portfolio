@@ -26,7 +26,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px 0 120px;
+    padding: 20px 30px 0 40px;
     background-color: transparent;
     position: absolute;
     width: 100%;
@@ -106,7 +106,7 @@ nav {
 
 .bannerContent {
     width: 50%;
-    padding-left: 120px;
+    padding-left: 40px;
 }
 
 .bannerText {
@@ -123,8 +123,9 @@ nav {
 
 .bannerText h1 {
     color: #000;
-    font-size: 50px;
+    font-size: 42px;
     font-weight: 900;
+    font-family: 'Montserrat';
 }
 
 .bannerText p {
@@ -1171,7 +1172,7 @@ footer>h3 {
 
     .bannerContent {
         height: 180px;
-        padding: 20px 30px;
+        padding: 20px 25px;
     }
 
     .bannerImage img {
