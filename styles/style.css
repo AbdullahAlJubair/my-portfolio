@@ -153,7 +153,6 @@ nav {
     width: 50%;
     height: 100%;
     clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
-
 }
 
 .bannerImage img {
@@ -163,6 +162,21 @@ nav {
     width: 400px;
     height: auto;
     object-fit: cover;
+    animation-name: imgnim;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes imgnim {
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: 5px;
+    }
+    100% {
+        margin-top: 0;
+    }
 }
 
 /* About Section Layout */
@@ -666,6 +680,7 @@ nav {
 /* Resume section layout style */
 .resumeBox {
     margin-top: 150px;
+    padding-bottom: 50px;
 }
 .resumeBox h3 {
     font-size: 42px;
@@ -724,12 +739,134 @@ nav {
     font-weight: 700;
     margin-top: 20px;
     cursor: pointer;
-    
+}
+/* Footer Design Layout */
+footer {
+    background-color: #000;
+    padding: 20px;
+}
+footer>h3 {
+    text-align: center;
+    color: var(--secondaryColor);
+    font-size: 42px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+}
+/* Social Icon Design */
+.contactContainer {
+    width: 700px;
+    margin: 0 auto;
+}
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.socialIcon {
+    width: 38px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: var(--grayWhite);
+    padding: 4px;
+    border-radius: 20px;
+    transition: width 1s;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.socialIcon:hover {
+    width: 125px;
+    padding: 2px 15px 2px 4px;
+}
+.socialIcon> img {
+    width: 30px;
+}
+.socialIcon > p {
+    opacity: 0;
+    font-weight: 700;
+    font-size: 15px;
+    transition: opacity .5s;
+    text-align: center;
+    width: 95px;
+}
+.socialIcon:hover > p {
+    opacity: 1;
+}
+#linkedin {
+    color: #0069ab;
+}
+#facebook {
+    color: #0288d1;
+}
+#whatsapp {
+    color: #40c351;
+}
+#telegram {
+    color: #0098bd;
+}
+#skype {
+    color: #00bdd7;
 }
 
+/* Contact Icon */
+.contactInfo {
+    text-align: center;
+}
+.contactInfo>img {
+    height: 150px;
+    object-fit: cover;
+}
+.contactIcon {
+    margin: 20px auto;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--grayWhite);
+    padding: 4px 15px 4px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.contactIcon img {
+    width: 30px;
+}
+.contactIcon p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+/* Small Footer Section Design */
+.smallFooter {
+    margin-top: 100px;
+    padding: 5px 30px 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondaryColor);
+    border-radius: 25px;
+}
+.smallFooter>p {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+.smallContent {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.smallContent img {
+    width: 40px;
+}
 
-
-
+.smallContent>p {
+    font-weight: 500;
+    font-family: "Montserrat";
+}
 
 
 
@@ -1142,6 +1279,7 @@ nav {
     }
     .resumeBox {
         margin-top: 100px;
+        padding-bottom: 0;
     }
     .resumeBox h3 {
         font-size: 28px;
@@ -1152,10 +1290,35 @@ nav {
     #resumeBtn1 {
         margin-right: 0;
     }
-    
-    
     .resumeBtn {
         padding: 10px 15px;
+    }
+    footer>h3 {
+        font-size: 20px;
+    }
+    .contactContainer {
+        width: auto;
+    }
+    .contactIcon img {
+        width: 20px;
+    }
+    .contactIcon p {
+        font-size: 12px;
+    }
+    .smallFooter {
+        padding: 5px 14px 5px 5px;
+    }
+    .smallContent {
+        gap: 5px;
+    }
+    .smallContent img {
+        width: 25px;
+    }
+    .smallContent>p {
+        font-size: 10px;
+    }
+    .smallFooter>p {
+        font-size: 8px;
     }
 }
 
@@ -1188,6 +1351,16 @@ nav {
     .headingBox p {
         font-size: 12px;
     }
+    .experienceBox>.exploreHead,
+    .educationBox>.exploreHead {
+        margin: 0 0 50px;
+    }
+    .exploreHead {
+        font-size: 20px;
+    }
+    .exploreHead::after {
+        top: 25px;
+    }
 
     .skillBox {
         grid-template-columns: repeat(3, 1fr);
@@ -1204,5 +1377,10 @@ nav {
     .xpCardJobDetails {
         flex-wrap: wrap;
         row-gap: 5px;
+    }
+    .smallFooter {
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 6px;
     }
 }
