@@ -388,6 +388,7 @@ nav {
 .projectBox>.headingBox h2 {
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
+    color: var(--secondaryColor);
 }
 
 .projectBox>.headingBox p {
@@ -426,20 +427,23 @@ nav {
 
 .projectContent h4 {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 10px;
+    color: var(--secondaryColor);
 }
 
 .projectContent p {
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 15px;
+    color: var(--grayWhite);
 }
 
 .projectContent h5 {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 5px;
+    color: var(--grayWhite);
 }
 
 .projectContent table {
@@ -525,6 +529,10 @@ nav {
     position: absolute;
     top: -10px;
     left: -40px;
+}
+.eCard>p {
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .eCard:nth-child(3)>.eCardHead img {
@@ -832,6 +840,11 @@ footer>h3 {
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+.social a,
+.contactInfo a {
+    text-decoration: none;
+    color: #000;
 }
 .socialIcon {
     width: 38px;
@@ -1151,6 +1164,9 @@ footer>h3 {
     .eCard {
         flex: 0 1 calc(50% - 80px);
     }
+    .eCard>p {
+        font-size: 13px;
+    }
 
     .experienceBox {
         padding: 50px 10px;
@@ -1160,6 +1176,12 @@ footer>h3 {
     }
     .eduCard {
         flex: unset;
+    }
+    footer>h3 {
+        font-size: 26px;
+    }
+    .contactContainer {
+        width: auto;
     }
 
 }
@@ -1178,9 +1200,20 @@ footer>h3 {
     .bannerImage img {
         margin-top: 40px;
     }
+    .bannerText h1 {
+        font-size: 22px;
+    }
+    .bannerText p {
+        font-size: 12px;
+    }
 
     .about {
         padding: 20px 10px;
+    }
+    .right-side {
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .aboutText {
         padding: 10px;
@@ -1258,8 +1291,7 @@ footer>h3 {
 
     .eCard {
         flex: 1 1 100%;
-        padding: 20px 20px 0 60px;
-        ;
+        padding: 20px 10px 0 45px;
     }
 
     .eCard:nth-last-child(1) {
@@ -1352,9 +1384,6 @@ footer>h3 {
     }
     footer>h3 {
         font-size: 20px;
-    }
-    .contactContainer {
-        width: auto;
     }
     .contactIcon img {
         width: 20px;
