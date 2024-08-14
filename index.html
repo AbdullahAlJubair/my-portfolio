@@ -40,10 +40,14 @@
                 </div>
                 <div>
                     <ul class="menu">
-                        <li><a href="">About Me</a></li>
-                        <li><a href="">Skills</a></li>
-                        <li><a href="">Portfolio</a></li>
-                        <button class="navBtn">Contact Me</button>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li>
+                            <a href="https://wa.me/8801882795660?" target="_blank">
+                                <button class="navBtn">Contact Me</button>
+                            </a>
+                        </li>
                     </ul>
                     <!-- Hamburger Icon -->
                     <div class="hamburger">
@@ -54,10 +58,20 @@
                 </div>
             </div>
             <ul class="mobileNav">
-                <li><a href="">Skills</a></li>
-                <li><a href="">About Me</a></li>
-                <li><a href="">Portfolio</a></li>
-                <button class="navBtn">Contact Me</button>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li>
+                    <a href="./documents/Abdullah-Al-Jubair-Resume.pdf"  download="Abdullah-Al-Jubair-Resume.pdf">
+                        <button class="navBtn">Resume</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/8801882795660?" target="_blank">
+                        <button class="navBtn">Contact Me</button>
+                    </a>
+                </li>
+                
             </ul>
         </nav>
         <!--Banner Layout-->
@@ -65,14 +79,16 @@
             <div class="bannerContent">
                 <div class="bannerText">
                     <h3>Hello! This is</h3>
-                    <h1>ABDULLAH AL JUBAIR</h1>
+                    <h1>ABDULLAH AL <span>JUBAIR</span></h1>
                     <p>A Front-end Developer | Web Designer</p>
 
                 </div>
                 <div class="iconBox">
-                    <i class="fa-solid fa-at"></i>
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-linkedin-in"></i>
+                    <a href="mailto:fabdullahjubair@gmail.com" target="_blank"><i class="fa-solid fa-at"></i></a>
+                    <a href="https://wa.me/8801882795660?" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/AbdullahAlJubair" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://bd.linkedin.com/in/fahadwares" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="tel:+8801882795660"><i class="fa-solid fa-mobile-button"></i></a>
                 </div>
             </div>
 
@@ -84,7 +100,7 @@
     <!-- Main Layout  -->
     <main>
         <!-- About Layout  -->
-        <section class="about">
+        <section id="about" class="about">
             <div class="profile-section">
                 <div class="left-side">
                     <div class="profile">
@@ -139,9 +155,11 @@
                     addition to my technical skills, I am committed to staying up-to-date with the latest industry
                     trends and continuously improving my craft to provide the best possible service.</p>
             </div>
-            <button id="resumeBtn1" class="resumeBtn">
-                <i class="fa-solid fa-download"></i> &nbsp; Resume
-            </button>
+            <a href="./documents/Abdullah-Al-Jubair-Resume.pdf"  download="Abdullah-Al-Jubair-Resume.pdf">
+                <button id="resumeBtn1" class="resumeBtn">
+                    <i class="fa-solid fa-download"></i> &nbsp; Resume
+                </button>
+            </a>
         </section>
         <!-- My Skills Layout -->
         <section class="allSkills">
@@ -232,7 +250,7 @@
             </div>
         </section>
         <!-- Featured Projects Layout -->
-        <section class="projectBox">
+        <section id="portfolio" class="projectBox">
             <div class="headingBox">
                 <h2>Featured Projects</h2>
                 <p>Here are some of the selected projects that showcase my passion for front-end development.</p>
@@ -264,7 +282,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a href="https://callforappointments.com/">
+                    <a href="https://callforappointments.com/" target="_blank">
                         LIVE DEMO &nbsp <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
@@ -300,7 +318,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a href="https://digitalchannels.agency/">
+                    <a href="https://digitalchannels.agency/" target="_blank">
                         LIVE DEMO &nbsp <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
@@ -336,7 +354,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a href="https://africanfabricsinc.com/">
+                    <a href="https://africanfabricsinc.com/" target="_blank">
                         LIVE DEMO &nbsp <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
@@ -368,7 +386,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a href="https://elaborate-fairy-efa6d6.netlify.app/">
+                    <a href="https://elaborate-fairy-efa6d6.netlify.app/" target="_blank">
                         LIVE DEMO &nbsp <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
@@ -414,7 +432,7 @@
             </div>
         </section>
         <!-- Experience, Education and resume Section Layout-->
-        <section class="experienceBox">
+        <section id="experience" class="experienceBox">
             <h3 class="exploreHead">Work Experience</h3>
             <!-- Experience Container -->
             <div class="experienceContainer">
@@ -599,10 +617,14 @@
                     <h4 class="resumeTitle">Mohammad Abdullah Al Jubair</h4>
                     <p class="resumeText">Front End Developer / Web Designer</p>
                     <div class="resumeBtnBox">
-                        <button id="resumeBtn1" class="resumeBtn">
-                            <i class="fa-solid fa-download"></i> &nbsp; Resume
-                        </button>
-                        <button id="resumeBtn2" class="resumeBtn">Discuss Project</button>
+                        <a href="./documents/Abdullah-Al-Jubair-Resume.pdf"  download="Abdullah-Al-Jubair-Resume.pdf">
+                            <button id="resumeBtn1" class="resumeBtn">
+                                <i class="fa-solid fa-download"></i> &nbsp; Resume
+                            </button>
+                        </a>
+                        <a href="https://wa.me/8801882795660?" target="_blank">
+                            <button id="resumeBtn2" class="resumeBtn" >Discuss Project</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -622,7 +644,7 @@
         </section>
     </main>
     <footer>
-        <h3>For any questions please Contact with me:</h3>
+        <h3>For any queries please contact me:</h3>
         <div class="contactContainer">
             <div class="social">
                 <a href="https://bd.linkedin.com/in/fahadwares" target="_blank">

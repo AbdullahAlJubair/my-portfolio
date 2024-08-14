@@ -78,20 +78,25 @@ nav {
     border-radius: 20px;
     background-color: var(--secondaryColor);
 }
+.hamburger:nth-last-child(){
+    padding: 8px 20px;
+}
 
 /* Mobile Navigation */
 .mobileNav {
     display: none;
-    width: 100%;
+    width: calc(100% - 20px);
     position: absolute;
-    top: 70px;
+    top: 55px;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.836);
+    background-color: #1e1e1e;
     text-align: center;
+    margin: 0 10px;
+    border-radius: 10px;
+    z-index: 2;
 }
 
 .mobileNav li {
-    border-bottom: 1px solid #ddd;
     padding: 10px 20px;
 }
 
@@ -139,6 +144,10 @@ nav {
     font-weight: 900;
     font-family: 'Montserrat';
 }
+.bannerText h1>span {
+    color: var(--secondaryColor);
+    font-weight: 900;
+}
 
 .bannerText p {
     color: #909090;
@@ -147,16 +156,21 @@ nav {
     margin-bottom: 50px;
 }
 
-.iconBox>i {
+.iconBox>a {
     width: 60px;
     height: 55px;
     text-align: center;
+    text-decoration: none;
+    color: #000;
     font-size: 25px;
     padding: 15px;
     margin-right: 20px;
     cursor: pointer;
     background: #C4C4C4;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.iconBox>a>i {
+    font-size: 25px;
 }
 
 .bannerImage {
@@ -653,6 +667,9 @@ nav {
     width: 30px;
 }
 
+.xpJopTitle>h3 {
+    font-size: 16px;
+}
 .xpJopTitle>h3>span {
     margin-left: 10px;
     font-size: 10px;
@@ -661,6 +678,7 @@ nav {
     color: #018C0F;
     background-color: #D7FFE0;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.075);
+    display: inline-block;
 }
 
 .xpJobDescription {
@@ -827,6 +845,9 @@ nav {
     font-weight: 700;
     margin-top: 20px;
     cursor: pointer;
+}
+.resumeBtnBox>a {
+    text-decoration: none;
 }
 /* Clients Logo Slider Layout */
 .logoSlider {
@@ -1074,6 +1095,11 @@ footer>h3 {
     .mobileNav.active {
         display: block ;
     }
+    .navBtn {
+        background-color: var(--secondaryColor);
+        color: #000;
+        padding: 6px 15px;
+    }
 
     .banner {
         flex-direction: column-reverse;
@@ -1101,7 +1127,7 @@ footer>h3 {
         position: absolute;
         bottom: 0;
         z-index: 1;
-        background-color: rgba(0, 0, 0, 0.56);
+        background-color: rgb(0 0 0 / 70%);
         clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);
 
     }
@@ -1128,8 +1154,11 @@ footer>h3 {
         display: flex;
         flex-direction: column;
     }
+    .iconBox>a:nth-child(5){
+        display: none;
+    }
 
-    .iconBox>i {
+    .iconBox>a {
         width: 10px;
         height: 10px;
         font-size: 26px;
@@ -1225,6 +1254,9 @@ footer>h3 {
     .experienceBox {
         padding: 50px 10px;
     }
+    .companyDetails {
+        text-align: center;
+    }
     .educationContent {
         flex-wrap: wrap;
     }
@@ -1242,7 +1274,7 @@ footer>h3 {
 
 /* Mobile Design */
 @media only screen and (max-width: 430px) {
-    
+
     .bannerContent {
         height: 180px;
         padding: 20px 25px;
@@ -1256,6 +1288,9 @@ footer>h3 {
     }
     .bannerText p {
         font-size: 12px;
+    }
+    .iconBox>a:nth-child(4){
+        display: none;
     }
 
     .about {
@@ -1376,7 +1411,7 @@ footer>h3 {
         padding: 3px 3px 0px;
     }
 
-    .companyDetails h6 {
+    h6 {
         font-size: 12px;
         font-weight: 800;
     }
@@ -1385,7 +1420,9 @@ footer>h3 {
         font-size: 8px;
         margin-top: 2px;
     }
-
+    .xpJopTitle>h3 {
+        font-size: 12px;
+    }
     .xpJopTitle>h3>span {
         margin-left: 5px;
         font-size: 8px;
@@ -1502,6 +1539,9 @@ footer>h3 {
 
     .headingBox p {
         font-size: 12px;
+    }
+    .projectContent {
+        padding: 10px 0;
     }
     .experienceBox>.exploreHead,
     .educationBox>.exploreHead {

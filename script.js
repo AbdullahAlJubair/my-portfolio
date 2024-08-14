@@ -23,7 +23,19 @@
 //         }
 //     });
 // });
+// smooth scrolling code
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
 
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+// Navigation Menu functionality
 document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const mobileNav = document.querySelector('.mobileNav');
@@ -93,6 +105,8 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
+                    autoplaySpeed: 1500,
+                    speed: 4000
                 }
             }
         ]
