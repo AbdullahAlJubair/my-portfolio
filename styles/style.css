@@ -147,40 +147,46 @@ nav {
     font-weight: 900;
     font-family: 'Montserrat';
     display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 
 @keyframes typing {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  /* @keyframes blink-caret {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: var(--secondaryColor); }
   } */
-  
-  .typewriter {
+
+.typewriter {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-  }
-  
-  .typewriter .char {
-    opacity: 0; /* Start hidden */
+}
+
+.typewriter .char {
+    opacity: 0;
+    /* Start hidden */
     display: inline-block;
-  }
-  
-  /* .cursor {
+}
+
+/* .cursor {
     border-right: 0.15em solid var(--secondaryColor);
     animation: blink-caret 0.75s step-end infinite;
   } */
-  
-  .nickName {
-    color: var(--secondaryColor); 
-  }
+
+.nickName {
+    color: var(--secondaryColor);
+}
 
 .bannerText p {
     color: #909090;
