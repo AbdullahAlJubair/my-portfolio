@@ -816,6 +816,38 @@ nav {
     margin-top: 20px;
     cursor: pointer;
 }
+/* Clients Logo Slider Layout */
+.logoSlider {
+    padding: 0 0 100px;
+    background-color: #000;
+}
+.logoSlider>.exploreHead {
+    margin: 0px 0 100px;
+    color: var(--secondaryColor);
+}
+.logoSlider>.exploreHead::after {
+    filter: invert();
+}
+#gallery, .slick-initialized, .slick-slider{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: baseline !important;
+    
+}
+
+.slick-slide {
+    margin: 0 2rem;
+    background-color: var(--grayWhite);
+    box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+.slick-slide>img {
+    width: 100% !important;
+    height: 100px !important;
+    object-fit: contain !important;
+    overflow: hidden;
+}
+
 /* Footer Design Layout */
 footer {
     background-color: #000;
@@ -1018,8 +1050,8 @@ footer>h3 {
         color: #fff;
     }
 
-    .hamburger:hover .mobileNav {
-        display: block !important;
+    .mobileNav.active {
+        display: block ;
     }
 
     .banner {
@@ -1348,6 +1380,9 @@ footer>h3 {
     .educationBox {
         margin-top: 80px;
     }
+    .eduCard {
+        flex: 1;
+    }
     .eduDate {
         font-size: 10px;
     }
@@ -1381,6 +1416,12 @@ footer>h3 {
     }
     .resumeBtn {
         padding: 10px 15px;
+    }
+    .logoSlider {
+        padding: 0 0 40px;
+    }
+    .logoSlider>.exploreHead {
+        margin: 0px 0 40px;
     }
     footer>h3 {
         font-size: 20px;
