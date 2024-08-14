@@ -1,28 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     const hamburger = document.querySelector('.hamburger');
-//     const mobileNav = document.querySelector('.mobileNav');
-
-//     hamburger.addEventListener('click', function() {
-//         mobileNav.classList.toggle('active');
-//     });
-// });
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const hamburger = document.querySelector('.hamburger');
-//     const mobileNav = document.querySelector('.mobileNav');
-//     const icon = hamburger.querySelector('i');
-
-//     hamburger.addEventListener('click', function() {
-//         mobileNav.classList.toggle('active');
-//         if (mobileNav.classList.contains('active')) {
-//             icon.classList.remove('fa-bars');
-//             icon.classList.add('fa-xmark');
-//         } else {
-//             icon.classList.remove('fa-xmark');
-//             icon.classList.add('fa-bars');
-//         }
-//     });
-// });
 // smooth scrolling code
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -71,6 +46,40 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// -----------------Banner Text Animation---------------------------------
+document.addEventListener("DOMContentLoaded", function() {
+    const h1 = document.querySelector('.typewriter');
+    const text = 'ABDULLAH AL ';
+    const nickNameText = 'JUBAIR';
+    const fullText = text + nickNameText;
+
+    h1.innerHTML = ''; // Clear the h1 content
+
+    let delay = 0;
+
+    // Function to create and append spans with animation
+    function createSpans(content, parent, className = '') {
+        content.split('').forEach((char, index) => {
+            const span = document.createElement('span');
+            span.innerHTML = char === ' ' ? '&nbsp;' : char; // Preserve spaces
+            if (className) span.classList.add(className);
+            span.style.animation = `typing 0.5s ${delay}s forwards`;
+            span.classList.add('char');
+            delay += 0.1;
+            parent.appendChild(span);
+        });
+    }
+
+    // Create spans for the main text
+    createSpans(text, h1);
+
+    // Create spans for the nickName text
+    const nickNameContainer = document.createElement('span');
+    nickNameContainer.classList.add('nickName');
+    createSpans(nickNameText, nickNameContainer, 'nickName');
+    h1.appendChild(nickNameContainer);
+});
+
 // Logo Slider
 $(document).ready(function () {
     $('#gallery').slick({
@@ -112,42 +121,6 @@ $(document).ready(function () {
         ]
     });
 });
-
-
-// --------------------------------------------------
-document.addEventListener("DOMContentLoaded", function() {
-    const h1 = document.querySelector('.typewriter');
-    const text = 'ABDULLAH AL ';
-    const nickNameText = 'JUBAIR';
-    const fullText = text + nickNameText;
-
-    h1.innerHTML = ''; // Clear the h1 content
-
-    let delay = 0;
-
-    // Function to create and append spans with animation
-    function createSpans(content, parent, className = '') {
-        content.split('').forEach((char, index) => {
-            const span = document.createElement('span');
-            span.innerHTML = char === ' ' ? '&nbsp;' : char; // Preserve spaces
-            if (className) span.classList.add(className);
-            span.style.animation = `typing 0.5s ${delay}s forwards`;
-            span.classList.add('char');
-            delay += 0.1;
-            parent.appendChild(span);
-        });
-    }
-
-    // Create spans for the main text
-    createSpans(text, h1);
-
-    // Create spans for the nickName text
-    const nickNameContainer = document.createElement('span');
-    nickNameContainer.classList.add('nickName');
-    createSpans(nickNameText, nickNameContainer, 'nickName');
-    h1.appendChild(nickNameContainer);
-});
-
 
     
 

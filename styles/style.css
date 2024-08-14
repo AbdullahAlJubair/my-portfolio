@@ -94,12 +94,14 @@ nav {
     z-index: 1;
     background-color: #1e1e1e;
     text-align: center;
+    padding: 10px 5px;
     margin: 0 10px;
     border-radius: 10px;
     z-index: 2;
 }
 
 .mobileNav li {
+    list-style: none;
     padding: 10px 20px;
 }
 
