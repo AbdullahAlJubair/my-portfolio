@@ -112,3 +112,50 @@ $(document).ready(function () {
         ]
     });
 });
+
+
+// --------------------------------------------------
+document.addEventListener("DOMContentLoaded", function() {
+    const h1 = document.querySelector('.typewriter');
+    const text = 'ABDULLAH AL ';
+    const nickNameText = 'JUBAIR';
+    const fullText = text + nickNameText;
+
+    h1.innerHTML = ''; // Clear the h1 content
+
+    let delay = 0;
+
+    // Function to create and append spans with animation
+    function createSpans(content, parent, className = '') {
+        content.split('').forEach((char, index) => {
+            const span = document.createElement('span');
+            span.innerHTML = char === ' ' ? '&nbsp;' : char; // Preserve spaces
+            if (className) span.classList.add(className);
+            span.style.animation = `typing 0.5s ${delay}s forwards`;
+            span.classList.add('char');
+            delay += 0.1;
+            parent.appendChild(span);
+        });
+    }
+
+    // Create spans for the main text
+    createSpans(text, h1);
+
+    // Create spans for the nickName text
+    const nickNameContainer = document.createElement('span');
+    nickNameContainer.classList.add('nickName');
+    createSpans(nickNameText, nickNameContainer, 'nickName');
+    h1.appendChild(nickNameContainer);
+});
+
+
+    
+
+
+
+
+
+
+
+
+
