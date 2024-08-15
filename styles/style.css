@@ -52,6 +52,25 @@ nav {
     font-weight: 700;
     text-decoration: none;
 }
+.menuBar {
+    position: relative;
+}
+
+.menuBar::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondaryColor);
+    transition: width 0.5s ease, left 0.5s ease;
+}
+
+.menuBar:hover::after {
+    width: 100%;
+    left: 0;
+}
 
 .navBtn {
     color: #000;
@@ -61,6 +80,7 @@ nav {
     font-weight: 700;
     border-radius: 20px;
     border: 0;
+    cursor: pointer;
 }
 
 .hamburger {
@@ -1055,6 +1075,13 @@ footer>h3 {
 
 #skype {
     color: #00bdd7;
+}
+#instagram {
+    color: #ff0000;
+}
+
+#fiverr {
+    color: #3f9f17;
 }
 
 /* Contact Icon */
